@@ -1,0 +1,25 @@
+export {
+  GrokLoopClient,
+  buildCompactedTranscript,
+  extractAssistantText,
+  extractCompactionText,
+} from './client.js';
+export type {
+  CallOptions,
+  CompactionEvent,
+  CompactionItem,
+  CompletionWithMeta,
+  FunctionCallItem,
+  FunctionCallOutputItem,
+  GrokLoopKitMeta,
+  GrokLoopOptions,
+  GrokLoopState,
+  RawCompaction,
+  RawCompletion,
+  ResponsesInputItem,
+  ResponsesMessage,
+  ResponseOutputItem,
+  Tool,
+  ToolOutput,
+  Usage,
+} from './types.js';

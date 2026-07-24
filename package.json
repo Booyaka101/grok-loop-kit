@@ -1,0 +1,73 @@
+{
+  "name": "grok-loop-kit",
+  "version": "1.0.0",
+  "description": "Auto-apply Grok 4.5 context compaction to xAI Responses API agent loops. Drop-in client that compacts every N turns or when a token budget is exceeded.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./langgraph": {
+      "types": "./dist/langgraph.d.ts",
+      "import": "./dist/langgraph.js",
+      "require": "./dist/langgraph.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "grok",
+    "grok-4.5",
+    "xai",
+    "context-compaction",
+    "agent",
+    "agent-loop",
+    "responses-api",
+    "llm",
+    "langchain",
+    "langgraph"
+  ],
+  "author": "Booyaka101",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Booyaka101/grok-loop-kit.git"
+  },
+  "homepage": "https://github.com/Booyaka101/grok-loop-kit#readme",
+  "bugs": {
+    "url": "https://github.com/Booyaka101/grok-loop-kit/issues"
+  },
+  "peerDependencies": {
+    "@langchain/core": ">=0.3.0 <2"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@langchain/core": "^1.2.3",
+    "@langchain/langgraph": "^1.4.8",
+    "@types/node": "^22.20.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

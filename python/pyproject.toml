@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grok-loop-kit"
+version = "1.0.0"
+description = "Auto-apply Grok 4.5 context compaction to xAI Responses API agent loops."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["grok", "grok-4.5", "xai", "context-compaction", "agent", "responses-api", "llm"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Booyaka101/grok-loop-kit"
+Repository = "https://github.com/Booyaka101/grok-loop-kit"
+Issues = "https://github.com/Booyaka101/grok-loop-kit/issues"
+
+[project.optional-dependencies]
+# Faster HTTP if you prefer; the package works on stdlib urllib without it.
+requests = ["requests>=2.28"]
+
+[tool.setuptools]
+packages = ["grok_loop_kit"]
+
+[tool.setuptools.package-data]
+grok_loop_kit = ["py.typed"]
