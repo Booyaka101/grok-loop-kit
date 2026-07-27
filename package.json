@@ -27,7 +27,7 @@
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "test": "node --test \"test/*.test.mjs\"",
+    "test": "node scripts/test.mjs",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

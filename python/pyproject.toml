@@ -7,7 +7,7 @@ name = "grok-loop-kit"
 version = "1.0.0"
 description = "Auto-apply Grok 4.5 context compaction to xAI Responses API agent loops."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 keywords = ["grok", "grok-4.5", "xai", "context-compaction", "agent", "responses-api", "llm"]
 dependencies = []
