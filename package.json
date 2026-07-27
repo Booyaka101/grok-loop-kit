@@ -1,6 +1,6 @@
 {
   "name": "grok-loop-kit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Auto-apply Grok 4.5 context compaction to xAI Responses API agent loops. Drop-in client that compacts every N turns or when a token budget is exceeded.",
   "type": "module",
   "main": "./dist/index.cjs",
