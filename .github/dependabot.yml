@@ -1,7 +1,7 @@
 version: 2
 
 # Staying current is a standing requirement, so it is automated rather than
-# remembered. Grouped so each ecosystem lands as a single reviewable PR.
+# remembered.
 updates:
   - package-ecosystem: npm
     directory: /
@@ -11,10 +11,12 @@ updates:
     commit-message:
       prefix: 'chore(deps)'
     groups:
-      all-dependencies:
+      # Minor and patch only. Majors deliberately arrive as their own PR so one
+      # breaking upgrade cannot redden — and block — a batch of safe ones.
+      all-minor-patch:
         patterns: ['*']
+        update-types: ['minor', 'patch']
 
-  # The Python client lives in python/, alongside its pyproject.toml.
   - package-ecosystem: pip
     directory: /python
     schedule:
@@ -23,8 +25,11 @@ updates:
     commit-message:
       prefix: 'chore(deps)'
     groups:
-      all-python:
+      # Minor and patch only. Majors deliberately arrive as their own PR so one
+      # breaking upgrade cannot redden — and block — a batch of safe ones.
+      python-minor-patch:
         patterns: ['*']
+        update-types: ['minor', 'patch']
 
   - package-ecosystem: github-actions
     directory: /
@@ -34,5 +39,9 @@ updates:
     commit-message:
       prefix: 'chore(ci)'
     groups:
-      all-actions:
+      # Minor and patch only. Majors deliberately arrive as their own PR so one
+      # breaking upgrade cannot redden — and block — a batch of safe ones.
+      actions-minor-patch:
         patterns: ['*']
+        update-types: ['minor', 'patch']
+
