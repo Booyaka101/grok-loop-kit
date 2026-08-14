@@ -1,0 +1,50 @@
+name: Bug report
+description: Something didn't work the way it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please **never paste your `XAI_API_KEY`** — check any command output or transcript you copy in here for it first.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, and what came back.
+      placeholder: |
+        import { ... } from 'grok-loop-kit'
+        // ...
+        Error: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: grok-loop-kit version
+      description: From your lockfile or `npm ls grok-loop-kit`.
+    validations:
+      required: true
+
+  - type: input
+    id: runtime
+    attributes:
+      label: Node version and OS
+      description: Output of `node --version`, plus your OS.
+      placeholder: v22.18.0 on Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: textarea
+    id: shape
+    attributes:
+      label: Transcript shape at the point it broke
+      description: Turn count, rough token size and which roles were present. The content itself is rarely needed and often sensitive.

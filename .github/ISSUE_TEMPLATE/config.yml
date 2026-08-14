@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: xAI context compaction docs
+    url: https://docs.x.ai/developers/advanced-api-usage/context-compaction
+    about: The endpoint's own behaviour, limits and pricing.
+  - name: xAI API status and support
+    url: https://status.x.ai/
+    about: Compaction returning 5xx or timing out is usually upstream, not this library.
+  - name: Security issue
+    url: https://github.com/Booyaka101/grok-loop-kit/security/advisories/new
+    about: Please report vulnerabilities privately, not as a public issue.
