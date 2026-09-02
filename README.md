@@ -258,10 +258,9 @@ Everything runs against `test/mock-server.mjs`, a self-contained mock of xAI's
 
 ### Using it with the grokscope mock
 
-The brief referenced adding a compact endpoint to
-`D:\Repos\ideas\grokscope\test\mock-server.mjs`. To keep this package hermetic we
-ship our **own** mock instead. If you want the grokscope mock to answer
-`/v1/responses/compact`, add this branch before its `/responses` handler:
+This package ships its own hermetic mock. If you already run the grokscope mock and
+want it to answer `/v1/responses/compact` too, add this branch before its
+`/responses` handler:
 
 ```js
 if (req.method === 'POST' && req.url?.endsWith('/responses/compact')) {
