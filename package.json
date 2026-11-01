@@ -64,7 +64,7 @@
     "@langchain/core": "^1.2.3",
     "@langchain/langgraph": "^1.4.8",
     "@types/node": "^26.1.1",
-    "tsup": "^8.5.0",
+    "tsup": "^9.0.0",
     "typescript": "^5.9.3"
   },
   "engines": {

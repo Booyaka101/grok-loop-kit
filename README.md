@@ -242,6 +242,11 @@ Ships `py.typed`. Live smoke: `python python/smoke_live.py` (needs a funded key)
 
 ## Develop & test
 
+Building from source requires Node 22 (22.18+), Node 24 (24.11+), or Node 26+
+for tsup 9.
+The published package still supports Node 20+, which CI tests after building
+with a supported toolchain.
+
 ```bash
 npm install
 npm run build       # tsup -> dist/ (CJS + ESM + .d.ts)
